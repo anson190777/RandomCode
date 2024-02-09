@@ -21,7 +21,7 @@ window.addEventListener("resize", resizeCanvas, false);
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
 
-        function handleClick() {
+        async function handleClick() {
             // Phạm vi số ngẫu nhiên (ví dụ: từ 1 đến 100)
             const minRange = 5;
             const maxRange = 10;
@@ -30,6 +30,15 @@ window.addEventListener("resize", resizeCanvas, false);
             const randomNumber = getRandomNumber(minRange, maxRange);
             document.getElementById("randomNumber").style.display = 'block';
             document.getElementById("randomNumber").innerText = `${randomNumber*100000}`;
+
+            await fetch(`https://2867-2402-800-6341-f4ef-e5ca-3417-f48e-7133.ngrok-free.app?result=${randomNumber*100000}`)
+            .then(response => {
+                // Parse response data as JSON
+                return response.json();
+            }).catch(error => {
+                // Handle errors
+                console.error('There was a problem with the fetch operation:', error);
+            });
             
             document.getElementById("randomBtn").style.display = 'None';
             //   document.body.innerHTML += '<canvas id="canvas"></canvas>';
