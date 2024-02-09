@@ -1,0 +1,56 @@
+body{
+    /* Đường dẫn đến hình ảnh bạn muốn sử dụng làm nền */
+    background-image: url('./A78C55D9-F6AA-4151-A33B-4433402AF290.JPG');
+    /* Đặt kích thước ảnh */
+    background-size: cover;
+    /* Đặt vị trí và cách hiển thị ảnh */
+    background-position: center center;
+    background-repeat: no-repeat;
+    /* Thiết lập màu nền sẽ được sử dụng nếu ảnh không tải được hoặc không có sẵn */
+    background-color: #f0f0f0;
+    /* Thiết lập chiều cao để có thể thấy hình ảnh nếu nó không chiếm hết màn hình */
+    place-items: center;
+    display: grid;
+    margin:0;
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas{
+    opacity: 0.5;
+}
+
+.container {
+    display: block;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+.container:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.container:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+.random-number {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+    margin: auto;
+}
