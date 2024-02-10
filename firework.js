@@ -82,7 +82,7 @@ window.addEventListener("resize", resizeCanvas, false);
         
         function paint() {
             ctx.globalCompositeOperation = 'source-over';
-            ctx.globalAlpha = 0.2;
+            ctx.globalAlpha = 0.1;
             ctx.fillStyle = "rgba(0,0,0,0)";
             ctx.fillRect(0, 0, w, h);
             ctx.globalCompositeOperation = 'lighten';
